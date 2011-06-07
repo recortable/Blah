@@ -1,0 +1,49 @@
+
+@import "variables.css.scss";
+@import "compass/css3";
+
+#session {
+    margin: 0 10px;
+    span.flash {float:right; background-color:yellow; padding: 0 5px;}
+}
+
+.container {
+    width: 100%;overflow:hidden;
+    .column2 {float:left;width:50%;}
+}
+
+span.notice {background-color:yellow;}
+
+#page {
+    max-width: 960px;
+    margin: 10px auto;
+
+    .content {
+        overflow: hidden;
+        background-color:$c-main;
+        @include border-radius(5px);
+    }
+
+    .browser {
+        background-color:lighten($c-background, 35);
+        @include border-radius(5px);
+        @include single-box-shadow(gray, 1px, 0px, 4px);
+        padding: 10px;
+        margin-bottom:1px;
+        z-index:10000;
+    }
+
+    .main {
+        padding: 10px;
+        z-index:500;
+    }
+}
+
+.main {
+    ul.properties {
+        li {
+            label {font-weight:bold;}
+        }
+    }
+}
+.main > p {margin-bottom:0.5em;@include single-text-shadow(darken($c-background, 10), 1px, 0, 1px);color: darken($c-background, 50);}

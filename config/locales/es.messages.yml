@@ -1,0 +1,10 @@
+es:
+  messages:
+    response:
+      title: "Respondiendo a '%{title}'"
+
+  simple_form:
+    labels:
+      message:
+        title: 'Asunto'
+        body: 'Texto'

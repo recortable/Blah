@@ -1,0 +1,27 @@
+<%= div_for message do %>
+    <%= button_group do %>
+    <% end %>
+    <%= avatar_img message.user, 48 %>
+    <div class="authoring">
+      <%= link_to message.user.name, message.user %> hace <%= time_ago_in_words message.created_at %>
+    </div>
+    <%= title message.title %>
+    <div class="body"><%= render_body message %></div>
+    <div class="responses">
+      <% message.children.each do |child| %>
+          <div class="response">
+            <div class="authoring">
+              Respuesta de <%= link_to child.user.name, child.user %> hace <%= time_ago_in_words child.created_at %>
+            </div>
+            <div class="body"><%= render_body child %></div>
+          </div>
+      <% end %>
+      <h3>Responder</h3>
+      <%= simple_form_for message_response do |form| %>
+          <%= form.input :parent_id, :as => :hidden %>
+          <%= form.input :title, :as => :hidden %>
+          <%= form.input :body %>
+          <%= form.submit 'Responder' %>
+      <% end %>
+    </div>
+<% end %>

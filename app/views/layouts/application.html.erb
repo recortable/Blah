@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= yield :title %> :: <%= current_group.name %></title>
+  <%= stylesheet_link_tag "application" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<div id="page">
+  <div id="session">
+    <% if current_user %>
+        <%= link_to current_user.name, current_user %>
+    <% end %>
+    &nbsp;
+    <%= content_tag(:span, flash[:notice], :class => 'flash notice') if flash[:notice].present? %>
+  </div>
+  <div class="container content">
+    <div class="column2">
+      <div class="browser">
+        <%= render 'browser' %>
+      </div>
+    </div>
+    <div class="column2">
+      <div class="main">
+        <%= yield %>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

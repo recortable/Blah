@@ -1,0 +1,78 @@
+/* line 4, ../../app/assets/stylesheets/html.css.scss */
+html {
+  background-color: #58df37;
+}
+
+/* line 8, ../../app/assets/stylesheets/html.css.scss */
+body {
+  font-family: Arial,"Helvetica Neue",sans-serif;
+  font-size: 90%;
+  line-height: 1.3em;
+  color: #333333;
+}
+
+/* line 15, ../../app/assets/stylesheets/html.css.scss */
+em {
+  font-style: italic;
+}
+
+/* line 16, ../../app/assets/stylesheets/html.css.scss */
+strong {
+  font-weight: bold;
+}
+
+/* line 18, ../../app/assets/stylesheets/html.css.scss */
+a {
+  text-decoration: none;
+  color: #2b5f1e;
+}
+
+/* line 19, ../../app/assets/stylesheets/html.css.scss */
+a:hover {
+  color: #319818;
+}
+
+/* line 20, ../../app/assets/stylesheets/html.css.scss */
+h1 {
+  font-size: 160%;
+}
+
+/* line 21, ../../app/assets/stylesheets/html.css.scss */
+h2 {
+  font-size: 120%;
+  font-weight: bold;
+}
+
+/* line 22, ../../app/assets/stylesheets/html.css.scss */
+p {
+  margin: 5px 0;
+}
+
+/* line 23, ../../app/assets/stylesheets/html.css.scss */
+form {
+  width: 100%;
+}
+/* line 25, ../../app/assets/stylesheets/html.css.scss */
+form textarea {
+  height: 5em;
+  width: 100%;
+}
+
+/* line 30, ../../app/assets/stylesheets/html.css.scss */
+.main form label {
+  display: block;
+}
+/* line 31, ../../app/assets/stylesheets/html.css.scss */
+.main form div.input {
+  margin: 5px 0;
+}
+/* line 32, ../../app/assets/stylesheets/html.css.scss */
+.main form input[type=text], .main form input[type=password] {
+  width: 25em;
+}
+/* line 33, ../../app/assets/stylesheets/html.css.scss */
+.main form span.hint {
+  display: block;
+  color: darker(#58df37, 10);
+  font-size: 80%;
+}

@@ -1,0 +1,130 @@
+/* line 4, ../../app/assets/stylesheets/messages.css.scss */
+.new_message {
+  margin-bottom: 40px;
+}
+
+/* line 9, ../../app/assets/stylesheets/messages.css.scss */
+.main div.message {
+  background-color: white;
+  padding: 10px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  border-radius: 5px;
+}
+/* line 14, ../../app/assets/stylesheets/messages.css.scss */
+.main div.message h1 {
+  font-size: 140%;
+  margin: 3px 0 5px 52px;
+}
+/* line 16, ../../app/assets/stylesheets/messages.css.scss */
+.main div.message .button-group {
+  float: right;
+}
+/* line 17, ../../app/assets/stylesheets/messages.css.scss */
+.main div.message img.avatar {
+  float: left;
+  margin-right: 5px;
+}
+/* line 18, ../../app/assets/stylesheets/messages.css.scss */
+.main div.message .body {
+  margin-left: 52px;
+}
+/* line 20, ../../app/assets/stylesheets/messages.css.scss */
+.main div.message div.responses {
+  margin-top: 10px;
+  padding-top: 2px;
+  border-top: 1px solid #93c287;
+}
+/* line 24, ../../app/assets/stylesheets/messages.css.scss */
+.main div.message div.responses h3 {
+  margin-top: 10px;
+}
+/* line 26, ../../app/assets/stylesheets/messages.css.scss */
+.main div.message div.responses div.response {
+  border-bottom: 1px solid #93c287;
+}
+/* line 28, ../../app/assets/stylesheets/messages.css.scss */
+.main div.message div.responses div.response .authoring {
+  margin: 0;
+}
+/* line 29, ../../app/assets/stylesheets/messages.css.scss */
+.main div.message div.responses div.response .body {
+  margin: 0 0 2px 0;
+}
+/* line 34, ../../app/assets/stylesheets/messages.css.scss */
+.main div.message form {
+  width: 98%;
+}
+/* line 36, ../../app/assets/stylesheets/messages.css.scss */
+.main div.message form label {
+  display: none;
+}
+
+/* line 43, ../../app/assets/stylesheets/messages.css.scss */
+.message h1 {
+  font-size: 110%;
+  font-weight: bold;
+}
+/* line 44, ../../app/assets/stylesheets/messages.css.scss */
+.message h1 a {
+  color: #333333;
+}
+/* line 47, ../../app/assets/stylesheets/messages.css.scss */
+.message .authoring {
+  color: gray;
+  font-size: 90%;
+  margin-bottom: 4px;
+}
+/* line 50, ../../app/assets/stylesheets/messages.css.scss */
+.message .authoring a {
+  color: #333333;
+  font-weight: bold;
+}
+/* line 55, ../../app/assets/stylesheets/messages.css.scss */
+.message .body h1, .message .body h2, .message .body h3 {
+  font-size: 100%;
+}
+
+/* line 60, ../../app/assets/stylesheets/messages.css.scss */
+.messages {
+  border-bottom: 1px solid #93c287;
+}
+/* line 63, ../../app/assets/stylesheets/messages.css.scss */
+.messages div.message {
+  padding: 4px 4px;
+  border-top: 1px solid #93c287;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -o-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -khtml-border-radius: 2px;
+  border-radius: 2px;
+}
+/* line 67, ../../app/assets/stylesheets/messages.css.scss */
+.messages div.message a.go {
+  float: right;
+  color: #93c287;
+  font-size: 80%;
+}
+/* line 70, ../../app/assets/stylesheets/messages.css.scss */
+.messages div.message:hover {
+  background-color: #c0dcba;
+}
+
+/* line 75, ../../app/assets/stylesheets/messages.css.scss */
+.browser form.message label {
+  display: none;
+}
+/* line 76, ../../app/assets/stylesheets/messages.css.scss */
+.browser form.message textarea, .browser form.message input[type=text] {
+  width: 98%;
+  border: 1px solid #93c287;
+  padding: 2px;
+}
+/* line 77, ../../app/assets/stylesheets/messages.css.scss */
+.browser form.message textarea {
+  height: 5em;
+}

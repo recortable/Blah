@@ -1,0 +1,15 @@
+<div class="session">
+<%= title "Entrar en #{current_group.name}" %>
+
+<%= form_tag signin_path do  %>
+    <div class="input">
+      <label>Dirección de correo electrónico:</label>
+      <%= text_field_tag :email %>
+    </div>
+    <div class="input">
+      <label>Contraseña:</label>
+      <%= password_field_tag :password %>
+    </div>
+    <%= submit_tag 'Entrar' %>
+<% end %>
+</div>

@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  group: 
+  user: 
+  body: MyString
+  event_at: 2011-06-07 18:02:40
+
+two:
+  group: 
+  user: 
+  body: MyString
+  event_at: 2011-06-07 18:02:40

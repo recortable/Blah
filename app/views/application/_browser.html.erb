@@ -1,0 +1,13 @@
+<div class="new_message">
+  <h2>Escribe a <%= current_group.name %></h2>
+  <%= simple_form_for new_message do |form| %>
+      <%= form.input :title %>
+      <%= form.input :body %>
+      <%= form.submit %>
+  <% end %>
+</div>
+
+<div class="messages">
+  <h2>Últimos mensajes</h2>
+  <%= render last_messages %>
+</div>

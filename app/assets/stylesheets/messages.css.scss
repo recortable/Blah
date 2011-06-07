@@ -1,0 +1,78 @@
+
+@import "variables.css.scss";
+@import "compass/css3";
+.new_message {
+    margin-bottom: 40px;
+}
+
+.main {
+    div.message {
+        background-color: white;
+        padding: 10px;
+        @include border-radius(5px);
+
+        h1 {font-size: 140%; margin:3px 0 5px 52px;}
+
+        .button-group {float: right;}
+        img.avatar {float: left; margin-right:5px; }
+        .body {margin-left: 52px;}
+
+        div.responses {
+            margin-top:10px;padding-top:2px;
+            border-top:1px solid $c-line;
+
+            h3 {margin-top: 10px;}
+
+            div.response {
+                border-bottom: 1px solid $c-line;
+                .authoring {margin: 0;}
+                .body {margin:0 0 2px 0;}
+            }
+
+        }
+
+        form {
+            width: 98%;
+            label {display: none;}
+        }
+    }
+}
+
+.message {
+
+    h1 {font-size: 110%; font-weight:bold;}
+    h1 a {color: $c-text;}
+
+
+    .authoring {
+        color: $c-gray;
+        font-size: 90%;
+        a {color: $c-text; font-weight:bold;}
+        margin-bottom:4px;
+    }
+
+    .body {
+        h1, h2, h3 {font-size: 100%;}
+    }
+}
+
+
+.messages {
+    border-bottom: 1px solid $c-line;
+
+    div.message {
+        padding: 4px 4px;
+        border-top: 1px solid $c-line;
+        @include border-radius(2px);
+        a.go {float: right; color: $c-line; font-size: 80%;}
+    }
+
+    div.message:hover {background-color:lighten($c-line, 15);}
+}
+
+
+.browser form.message {
+    label {display: none;}
+    textarea, input[type=text] {width: 98%;border: 1px solid $c-line; padding: 2px;}
+    textarea {height: 5em;}
+}

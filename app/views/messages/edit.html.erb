@@ -1,0 +1,11 @@
+<%= title 'Editar mensaje' %>
+
+<p>Importante: el mensaje ya se envió por correo. Las correcciones sólo se verán en la web, así que úsalo
+para correcciones leves. Si tienes que rectificar algo importante (como una hora, fecha, etcétera)
+responde a tu mensaje.</p>
+
+<%= simple_form_for message do |form| %>
+    <%= form.input :title %>
+    <%= form.input :body %>
+    <%= form.submit 'Modificar' %>
+<% end %>

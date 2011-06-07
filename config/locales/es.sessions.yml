@@ -1,0 +1,4 @@
+es:
+  sessions:
+    error:
+      create: "O la contraseña o la dirección de correo son incorrectas. Si no puedes entrar, contacta conmigo en danigb@gmail.com"

@@ -1,0 +1,30 @@
+<%= div_for user do %>
+    <div class="container">
+      <%= avatar_img user, 48 %>
+      <% title user.name %>
+      <h2><%= user.name %></h2>
+      </div>
+    <div class="description"><%= user.description %></div>
+    <%= button_group do %>
+        <%= home_button_link_to 'Volver', root_path %>
+        <%= settings_button_link_to 'Modificar mis datos', [:edit, user] if can? :edit, user %>
+        <%= remove_button_link_to 'Salir', signout_path, :confirm => '¿Seguro que quieres salir?' if current_user == user %>
+    <% end %>
+    <% if current_user == user and user.telephones.blank? %>
+        <p><span class="notice">Estaría bien que pusieses tu número de teléfono</span> por si tenemos que
+        contactar contigo por esa vía. Puedes añadir tu teléfono pulsando en <strong>'Modificar mis datos'</strong>.</p>
+        <p>Recuerda que sólo las personas de <%= current_group.name %> pueden verlos.<br/><br/></p>
+    <% end %>
+    <ul class="properties">
+      <li><label>Teléfonos de contacto:</label> <%= user.telephones %></li>
+      <% if current_user.super? %>
+          <li><label>Última vez:</label> hace <%= time_ago_in_words user.last_login_at if user.last_login_at? %></li>
+          <li><label>Número:</label> <%= user.login_count %></li>
+      <% end %>
+    </ul>
+    <% if current_user == user %>
+        <p><br/>Puedes cambiar tu icono <a href="http://es.gravatar.com/">pinchando aquí y registrándote</a>.
+        Es algo completamente opcional. Tu imágen no tiene por qué ser una foto tuya, y nos ayuda a reconocer
+        tus mensajes más rápidamente.</p>
+    <% end %>
+<% end %>

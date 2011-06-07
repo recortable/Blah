@@ -1,0 +1,14 @@
+<%= title 'Modificar mis datos' %>
+
+<%= button_group do %>
+    <%= arrowleft_button_link_to 'Cancelar', user %>
+<% end %>
+<%= simple_form_for user do |form| %>
+    <%= form.input :name %>
+    <%= form.input :email %>
+    <%= form.input :description %>
+    <%= form.input :telephones, :as => :string %>
+    <%= form.input :password %>
+    <%= form.input :password_confirmation %>
+    <%= form.submit 'Guardar' %>
+<% end %>

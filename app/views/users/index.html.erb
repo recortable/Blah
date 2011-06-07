@@ -1,0 +1,8 @@
+<%= title 'Participantes' %>
+
+<h3>En <%= current_group.name %> somos <%= current_group.users.count %>:</h3>
+<div class="users">
+  <% users.each do |user| %>
+  <%= link_to user.name, user %>
+  <% end %>
+</div>

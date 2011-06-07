@@ -1,0 +1,77 @@
+/* line 5, ../../app/assets/stylesheets/layout.css.scss */
+#session {
+  margin: 0 10px;
+}
+/* line 7, ../../app/assets/stylesheets/layout.css.scss */
+#session span.flash {
+  float: right;
+  background-color: yellow;
+  padding: 0 5px;
+}
+
+/* line 10, ../../app/assets/stylesheets/layout.css.scss */
+.container {
+  width: 100%;
+  overflow: hidden;
+}
+/* line 12, ../../app/assets/stylesheets/layout.css.scss */
+.container .column2 {
+  float: left;
+  width: 50%;
+}
+
+/* line 15, ../../app/assets/stylesheets/layout.css.scss */
+span.notice {
+  background-color: yellow;
+}
+
+/* line 17, ../../app/assets/stylesheets/layout.css.scss */
+#page {
+  max-width: 960px;
+  margin: 10px auto;
+}
+/* line 21, ../../app/assets/stylesheets/layout.css.scss */
+#page .content {
+  overflow: hidden;
+  background-color: #7de663;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  border-radius: 5px;
+}
+/* line 27, ../../app/assets/stylesheets/layout.css.scss */
+#page .browser {
+  background-color: #d8f8d1;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  border-radius: 5px;
+  -moz-box-shadow: 1px 0px 4px gray;
+  -webkit-box-shadow: 1px 0px 4px gray;
+  -o-box-shadow: 1px 0px 4px gray;
+  box-shadow: 1px 0px 4px gray;
+  padding: 10px;
+  margin-bottom: 1px;
+  z-index: 10000;
+}
+/* line 36, ../../app/assets/stylesheets/layout.css.scss */
+#page .main {
+  padding: 10px;
+  z-index: 500;
+}
+
+/* line 45, ../../app/assets/stylesheets/layout.css.scss */
+.main ul.properties li label {
+  font-weight: bold;
+}
+
+/* line 49, ../../app/assets/stylesheets/layout.css.scss */
+.main > p {
+  margin-bottom: 0.5em;
+  text-shadow: #40c41f 1px 0 1px;
+  color: #061403;
+}
