@@ -5,14 +5,14 @@ Rapid::Application.configure do
   config.cache_classes = true
 
   # Full error reports are disabled and caching is turned on
-  config.consider_all_requests_local       = false
+  config.consider_all_requests_local = false
   config.action_controller.perform_caching = true
 
   # Disable Rails's static asset server (Apache or nginx will already do this)
   config.serve_static_assets = true
 
   # Compress both stylesheets and JavaScripts
-  config.assets.js_compressor  = :uglifier
+  config.assets.js_compressor = :uglifier
   config.assets.css_compressor = :scss
 
   # Specifies the header that your server uses for sending files
@@ -53,6 +53,16 @@ Rapid::Application.configure do
 #      :password => 'autogestion',
 #      :authentication => 'plain'
 #  }
+
+  config.action_mailer.delivery_method = :smtp
+  ActionMailer::Base.smtp_settings = {
+      :address => "smtp.sendgrid.net",
+      :port => "25",
+      :authentication => :plain,
+      :user_name => ENV['SENDGRID_USERNAME'],
+      :password => ENV['SENDGRID_PASSWORD'],
+      :domain => ENV['SENDGRID_DOMAIN']
+  }
 
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
