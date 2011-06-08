@@ -22,15 +22,5 @@ Rapid::Application.configure do
   # Only use best-standards-support built into browsers
   config.action_dispatch.best_standards_support = :builtin
 
-  # 1and1
-  config.action_mailer.delivery_method = :smtp
-  config.action_mailer.smtp_settings = {
-      :address => "smtp.1and1.es",
-      :port => 587,
-      :domain => 'crestasylechugas.org',
-      :user_name => 'correo@booka.recortable.net',
-      :password => 'editorialabierta',
-      :authentication => 'plain'
-  }
 
 end
