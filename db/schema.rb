@@ -10,7 +10,17 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110608073827) do
+ActiveRecord::Schema.define(:version => 20110608124245) do
+
+  create_table "activities", :force => true do |t|
+    t.integer  "resource_id"
+    t.string   "resource_type"
+    t.string   "description",   :limit => 16
+    t.datetime "created_at"
+  end
+
+  add_index "activities", ["resource_id"], :name => "index_activities_on_resource_id"
+  add_index "activities", ["resource_type"], :name => "index_activities_on_resource_type"
 
   create_table "groups", :force => true do |t|
     t.string   "name",       :limit => 300

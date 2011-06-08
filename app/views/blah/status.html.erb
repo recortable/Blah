@@ -1,7 +1,10 @@
 <%= title 'Estado' %>
+<%= button_group do %>
+    <%= loop_button_link_to 'Lanzar trabajos', work_path %>
+<% end %>
 <h3>Notificaciones</h3>
 <ul>
   <% notifications.each do |n| %>
-      <li><%= n.user.name %> (<%= n.mailed %>)</li>
+      <li><%= n.user.name %> - <%= message_title n.message %></li>
   <% end %>
 </ul>

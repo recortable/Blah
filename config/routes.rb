@@ -10,6 +10,6 @@ Rapid::Application.routes.draw do
   match "/enter/:id" => "sessions#enter", :as => :enter
 
   match "/blah" => "blah#about"
-  match "/status" => "blah#status"
-  match "/process" => "blah#process"
+  match "/status" => "blah#status", :as => :status
+  match "/work" => "blah#perform_jobs", :as => :work
 end

@@ -5,4 +5,7 @@ class Notification < ActiveRecord::Base
   scope :pending, where(:mailed => false)
   scope :notified, where(:mailed => true)
 
+  def close
+    update_attribute(:mailed, true)
+  end
 end

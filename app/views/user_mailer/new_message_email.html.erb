@@ -1,0 +1,25 @@
+<h2><%= @user.name %> ha escrito:</h2>
+<h1><%= message_title @message %></h1>
+<div>
+  <%= render_body @message %>
+</div>
+
+<% if @message != @root %>
+    <div style="margin-top:40px;">
+      <h2>La conversación entera es:</h2>
+      <h1><%= @root.title %></h1>
+
+      <div>
+        <%= render_body @root %>
+      </div>
+      <div style="margin: 10px 10px">
+        <h2>Respuestas:</h2>
+        <% @root.children.each do |child| %>
+        <div class="<%= 'background-color:yellow;' if child == @message %>">
+            <p>Hace <%= time_ago_in_words child.created_at %>, <%= child.user.name %> dijo:</p>
+            <%= render_body child %>
+        </div>
+        <% end %>
+      </div>
+    </div>
+<% end %>

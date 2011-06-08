@@ -1,7 +1,7 @@
 es:
   messages:
     response:
-      title: "Respondiendo a '%{title}'"
+      title: "En respuesta a '%{title}'"
 
   simple_form:
     labels:
