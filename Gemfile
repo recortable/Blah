@@ -39,3 +39,8 @@ group :test, :development do
   #gem 'rails_best_practices'
   gem 'yaml_db'
 end
+
+group :production do
+  gem 'therubyracer-heroku', '0.8.1.pre3'
+  gem 'pg'
+end
