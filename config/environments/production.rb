@@ -44,15 +44,15 @@ Rapid::Application.configure do
   # config.threadsafe!
 
   # 1and1
-  config.action_mailer.delivery_method = :smtp
-  config.action_mailer.smtp_settings = {
-      :address => "smtp.1and1.es",
-      :port => 587,
-      :domain => 'crestasylechugas.org',
-      :user_name => 'cyl@mail.recortable.net',
-      :password => 'autogestion',
-      :authentication => 'plain'
-  }
+#  config.action_mailer.delivery_method = :smtp
+#  config.action_mailer.smtp_settings = {
+#      :address => "smtp.1and1.es",
+#      :port => 587,
+#      :domain => 'crestasylechugas.org',
+#      :user_name => 'cyl@mail.recortable.net',
+#      :password => 'autogestion',
+#      :authentication => 'plain'
+#  }
 
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
