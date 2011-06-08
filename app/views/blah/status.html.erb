@@ -1,0 +1,7 @@
+<%= title 'Estado' %>
+<h3>Notificaciones</h3>
+<ul>
+  <% notifications.each do |n| %>
+      <li><%= n.user.name %> (<%= n.mailed %>)</li>
+  <% end %>
+</ul>

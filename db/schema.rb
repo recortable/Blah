@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110607160240) do
+ActiveRecord::Schema.define(:version => 20110608073827) do
 
   create_table "groups", :force => true do |t|
     t.string   "name",       :limit => 300
@@ -46,6 +46,17 @@ ActiveRecord::Schema.define(:version => 20110607160240) do
   add_index "messages", ["ancestry"], :name => "index_messages_on_ancestry"
   add_index "messages", ["group_id"], :name => "index_messages_on_group_id"
   add_index "messages", ["user_id"], :name => "index_messages_on_user_id"
+
+  create_table "notifications", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "message_id"
+    t.boolean  "mailed"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "notifications", ["message_id"], :name => "index_notifications_on_message_id"
+  add_index "notifications", ["user_id"], :name => "index_notifications_on_user_id"
 
   create_table "users", :force => true do |t|
     t.string   "email"

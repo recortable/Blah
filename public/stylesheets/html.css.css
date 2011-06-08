@@ -44,33 +44,41 @@ h2 {
 }
 
 /* line 22, ../../app/assets/stylesheets/html.css.scss */
+h3 {
+  font-size: 105%;
+  font-weight: bold;
+}
+
+/* line 23, ../../app/assets/stylesheets/html.css.scss */
 p {
   margin: 5px 0;
 }
 
-/* line 23, ../../app/assets/stylesheets/html.css.scss */
+/* line 24, ../../app/assets/stylesheets/html.css.scss */
 form {
   width: 100%;
 }
-/* line 25, ../../app/assets/stylesheets/html.css.scss */
+/* line 26, ../../app/assets/stylesheets/html.css.scss */
 form textarea {
   height: 5em;
   width: 100%;
 }
 
-/* line 30, ../../app/assets/stylesheets/html.css.scss */
+/* line 31, ../../app/assets/stylesheets/html.css.scss */
 .main form label {
   display: block;
 }
-/* line 31, ../../app/assets/stylesheets/html.css.scss */
+/* line 32, ../../app/assets/stylesheets/html.css.scss */
 .main form div.input {
   margin: 5px 0;
 }
-/* line 32, ../../app/assets/stylesheets/html.css.scss */
+/* line 33, ../../app/assets/stylesheets/html.css.scss */
 .main form input[type=text], .main form input[type=password] {
   width: 25em;
+  padding: 2px;
+  border: 1px solid #93c287;
 }
-/* line 33, ../../app/assets/stylesheets/html.css.scss */
+/* line 34, ../../app/assets/stylesheets/html.css.scss */
 .main form span.hint {
   display: block;
   color: darker(#58df37, 10);

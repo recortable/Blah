@@ -19,6 +19,7 @@ a {text-decoration:none; color:darken(desaturate($c-background,20),30);}
 a:hover {color:darken(desaturate($c-background,0),20)}
 h1 {font-size: 160%;}
 h2 {font-size: 120%;font-weight:bold;}
+h3 {font-size: 105%;font-weight:bold;}
 p {margin: 5px 0;}
 form {
     width: 100%;
@@ -29,7 +30,7 @@ form {
     form {
         label {display: block;}
         div.input {margin: 5px 0;}
-        input[type=text], input[type=password] {width: 25em;}
+        input[type=text], input[type=password] {width: 25em; padding: 2px; border: 1px solid $c-line;}
         span.hint {display: block; color: darker($c-background, 10);font-size:80%;}
     }
 }
