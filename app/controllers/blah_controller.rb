@@ -1,4 +1,6 @@
 class BlahController < ApplicationController
+  before_filter :require_user, :except => [:about]
+
   def about
 
   end

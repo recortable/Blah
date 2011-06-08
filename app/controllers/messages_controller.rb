@@ -1,6 +1,6 @@
 class MessagesController < ApplicationController
-  respond_to :html
   before_filter :require_user
+  respond_to :html
   expose(:messages) { Message.all }
   expose(:message)
   expose(:message_response) { Message.new(:title => message.title, :parent => message)}

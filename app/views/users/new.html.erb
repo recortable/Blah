@@ -1,0 +1,7 @@
+<%= title "Invitar a participar en #{current_group.name}" %>
+
+<%= simple_form_for user do |form| %>
+    <%= form.input :name %>
+    <%= form.input :email %>
+    <%= form.submit 'Invitar' %>
+<% end %>

@@ -1,5 +1,5 @@
 <div class="new_message">
-  <h2>Escribe a <%= current_group.name %></h2>
+  <h2>Escribe a <%= current_group.name %> <%= link_to '&rArr;'.html_safe, users_path %></h2>
   <%= simple_form_for new_message do |form| %>
       <%= form.input :title %>
       <%= form.input :body %>

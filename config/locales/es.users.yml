@@ -2,6 +2,8 @@ es:
   simple_form:
     labels:
       user:
+        name: 'Nombre'
+        email: 'Dirección de correo electrónico'
         description: 'Breve descripción'
         telephones: 'Números de teléfono de contacto'
         password: 'Contraseña'

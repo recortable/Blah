@@ -1,8 +1,11 @@
-<%= title 'Participantes' %>
-
+<%= title "Participantes en #{current_group.name}" %>
+<%= button_group do %>
+    <%= home_button_link_to 'Volver', root_path %>
+    <%= add_button_link_to 'Invitar participante', new_user_path if can? :new, User %>
+<% end %>
 <h3>En <%= current_group.name %> somos <%= current_group.users.count %>:</h3>
 <div class="users">
   <% users.each do |user| %>
-  <%= link_to user.name, user %>
+      <%= link_to user.name, user %>
   <% end %>
 </div>
