@@ -8,7 +8,7 @@
     <%= title message.title %>
     <div class="body"><%= render_body message %></div>
     <div class="responses">
-      <% message.children.each do |child| %>
+      <% message.children.order('id ASC').each do |child| %>
           <div class="response">
             <div class="authoring">
               Respuesta de <%= link_to child.user.name, child.user %> hace <%= time_ago_in_words child.created_at %>
