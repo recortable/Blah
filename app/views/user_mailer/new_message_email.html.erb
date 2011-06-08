@@ -1,32 +1,34 @@
-<div style="border:1px solid black;padding:10px;margin:10px;">
-  <h4><%= @user.name %> ha escrito:</h4>
+<div style="background-color:#7DE663;padding:10px;">
+  <div style="border:1px solid gray;padding:10px;margin:10px;background-color:#D8F8D1;">
+    <h3><%= message_title @message %></h3>
+    <h4><%= @user.name %> ha dicho:</h4>
 
-  <h3><%= message_title @message %></h3>
-
-  <div>
-    <%= render_body @message %>
+    <div>
+      <%= render_body @message %>
+    </div>
   </div>
-</div>
 
-<% if @message != @root %>
-    <div style="border:1px solid black;padding:10px;margin:10px;">
-      <div style="margin-top:40px;">
-        <h4>La conversación entera es:</h4>
+  <% if @message != @root %>
+      <div style="border:1px solid gray;padding:10px;margin:10px;background-color:#D8F8D1;">
+        <div style="margin-top:40px;">
+          <h4>La conversación entera es:</h4>
 
-        <h3><%= @root.title %></h3>
+          <h3><%= @root.title %></h3>
+          <h4>Hace <%= time_ago_in_words @root.created_at %>, <%= @root.user.name %> dijo:</h4>
 
-        <div>
-          <%= render_body @root %>
-        </div>
-        <div style="margin: 10px 10px">
-          <h4>Respuestas:</h4>
-          <% @root.children.each do |child| %>
-              <div class="<%= 'background-color:yellow;' if child == @message %>">
-                <p>Hace <%= time_ago_in_words child.created_at %>, <%= child.user.name %> dijo:</p>
-                <%= render_body child %>
-              </div>
-          <% end %>
+          <div style="border-bottom:1px solid gray;padding-bottom:10px;margin-bottom:10px">
+            <%= render_body @root %>
+          </div>
+          <div style="margin: 10px 10px">
+            <h4>Respuestas:</h4>
+            <% @root.children.each do |child| %>
+                <div style="border-bottom:1px solid gray;padding-bottom:10px;margin-bottom:10px;<%= 'background-color:yellow;' if child == @message %>">
+                  <p>Hace <%= time_ago_in_words child.created_at %>, <%= child.user.name %> dijo:</p>
+                  <%= render_body child %>
+                </div>
+            <% end %>
+          </div>
         </div>
       </div>
-    </div>
-<% end %>
+  <% end %>
+</div>
