@@ -1,13 +1,24 @@
 <h1>Bienvenido a <%= current_group.name %></h1>
 <br/>
-<p>Esta es la web de trabajo de <%= current_group.name %> por lo que el acceso es restringido:
-  para entrar debes disponer de una cuenta previamente. Si tienes problemas para entrar puedes
-  contactar con danigb@gmail.com<br/></p>
+<p>Esta es la <strong>web de trabajo</strong> de <%= current_group.name %> por lo que
+  <strong>el acceso es restringido</strong>:
+  para entrar debes disponer de una cuenta previamente. </p>
 
-<p>Esta web <strong>sólo funciona con navegadores modernos</strong> como
+<p>Esta web <span class="notice">sólo funciona con navegadores modernos</span> como
   <a href="http://www.mozilla.com/es-ES/firefox/?from=getfirefox">Firefox</a> o
   <a href="http://www.google.com/chrome?hl=es">Chrome</a>. Por favor, si utilizas
   Internet Explorer... instala otro navegador mejor!<br/>
 </p>
 
-<p>Si lo que quieres es ponerte en contacto con nosotros, puedes escribir a contacto@crestasylechugas.org</p>
+<p>Si tienes problemas para entrar puedes
+  contactar con danigb@gmail.com<br/></p>
+
+<p>Si lo que quieres es ponerte en contacto con nosotros, puedes escribir aquí.
+  <strong>No olvides poner tu email para que podamos ponernos en contacto contigo!</strong></p>
+<div class="contact">
+  <%= form_tag contact_path do %>
+      <%= text_field_tag :name %>
+      <%= text_area_tag :body %>
+      <%= submit_tag 'Enviar' %>
+  <% end %>
+</div>

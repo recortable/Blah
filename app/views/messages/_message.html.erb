@@ -1,7 +1,7 @@
 <%= div_for message do %>
     <%= link_to 'ver', message.root, :class => 'go' %>
     <div class="authoring">
-      <%= link_to message.user.name, message.user %> hace <%= time_ago_in_words message.created_at %>
+      <%= link_to_if message.user_id != 1, message.user.name, message.user %> hace <%= time_ago_in_words message.created_at %>
     </div>
     <h1><%= link_to message_title(message), message %></h1>
     <div class="body"><%= render_body message, 250 %></div>

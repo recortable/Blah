@@ -12,4 +12,5 @@ Rapid::Application.routes.draw do
   match "/blah" => "blah#about"
   match "/status" => "blah#status", :as => :status
   match "/work" => "blah#perform_jobs", :as => :work
+  match "/contactar" => "blah#contact", :as => :contact
 end
