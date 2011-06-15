@@ -11,7 +11,7 @@ class ApplicationController < ActionController::Base
     session[:group_id] ||= 1
     Group.find session[:group_id]
   end
-  expose(:last_messages) { Message.order('id DESC').limit(20)}
+  expose(:last_messages) { current_group.messages.order('id DESC').limit(20)}
   expose(:new_message) { Message.new }
 
 

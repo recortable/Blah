@@ -1,7 +1,7 @@
 class MessagesController < ApplicationController
   before_filter :require_user
   respond_to :html
-  expose(:messages) { Message.all }
+  expose(:messages) { current_group.messages }
   expose(:message)
   expose(:message_response) { Message.new(:title => message.title, :parent => message)}
 
