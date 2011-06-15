@@ -1,7 +1,7 @@
 source 'http://rubygems.org'
 
-#gem 'rake', '0.9.2'
-gem 'rails', '3.1.0.rc2'
+gem 'rake', '0.9.2'
+gem 'rails', '3.1.0.rc4'
 #gem 'rails', :git => 'git://github.com/rails/rails.git', :branch => '3-1-stable'
 #gem 'sprockets', :git => 'git://github.com/sstephenson/sprockets.git'
 
