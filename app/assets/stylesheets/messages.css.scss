@@ -1,6 +1,6 @@
 
 @import "variables.css.scss";
-@import "compass/css3";
+
 .new_message {
     margin-bottom: 40px;
 }
@@ -9,7 +9,7 @@
     div.message {
         background-color: white;
         padding: 10px;
-        @include border-radius(5px);
+        border-radius: 5px;
 
         h1 {font-size: 140%; margin:3px 0 5px 52px;}
 
@@ -64,7 +64,7 @@
     div.message {
         padding: 4px 4px;
         border-top: 1px solid $c-line;
-        @include border-radius(2px);
+        border-radius: 2px;
         a.go {float: right; color: $c-line; font-size: 80%;}
     }
 

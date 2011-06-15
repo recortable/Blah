@@ -1,30 +1,39 @@
 source 'http://rubygems.org'
 
-gem 'rake', '0.9.2'
 gem 'rails', '3.1.0.rc4'
 #gem 'rails', :git => 'git://github.com/rails/rails.git', :branch => '3-1-stable'
 #gem 'sprockets', :git => 'git://github.com/sstephenson/sprockets.git'
-
+gem 'sqlite3'
+gem 'mysql2'
 
 # Asset template engines
 gem 'sass'
 gem 'coffee-script'
 gem 'uglifier'
 gem 'jquery-rails'
-gem 'compass'
 
 gem 'decent_exposure'
 gem 'simple_form'
 gem 'css3buttons'
 
 gem 'cancan'
+#gem 'meta_where'
+
 gem 'omniauth'
+
 gem 'ancestry'
 gem 'paper_trail'
 gem 'acts_as_list'
 gem 'rdiscount'
 gem 'kaminari'
 gem 'rails_autolink'
+
+#gem 'prawn'
+#gem 'prawnto'
+#gem 'nokogiri'
+
+#gem 'exception_notification', :require => 'exception_notifier'
+#gem 'newrelic_rpm'
 
 group :test, :development do
   # Pretty printed test output
@@ -37,12 +46,4 @@ group :test, :development do
   gem 'turn', :require => false
   #gem 'rails_best_practices'
   gem 'yaml_db'
-  gem 'mysql2'
-  gem 'sqlite3'
-end
-
-group :production do
-  #gem 'therubyracer-heroku', '0.8.1.pre3'
-  #gem 'pg'
-  gem 'mysql'
 end

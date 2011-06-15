@@ -1,6 +1,5 @@
 
 @import "variables.css.scss";
-@import "compass/css3";
 
 #session {
     margin: 0 10px;
@@ -21,13 +20,13 @@ span.notice {background-color:yellow;}
     .content {
         overflow: hidden;
         background-color:$c-main;
-        @include border-radius(5px);
+        border-radius: 5px;
     }
 
     .browser {
         background-color:lighten($c-background, 35);
-        @include border-radius(5px);
-        @include single-box-shadow(gray, 1px, 0px, 4px);
+        border-radius: 5px;
+        box-shadow: 1px 0 4px gray;
         padding: 10px;
         margin-bottom:1px;
         z-index:10000;
@@ -46,4 +45,4 @@ span.notice {background-color:yellow;}
         }
     }
 }
-.main > p {margin-bottom:0.5em;@include single-text-shadow(darken($c-background, 10), 1px, 0, 1px);color: darken($c-background, 50);}
+.main > p {margin-bottom:0.5em;text-shadow: 1px 0 1px darken($c-background, 10);color: darken($c-background, 50);}
