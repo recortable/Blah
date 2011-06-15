@@ -8,6 +8,7 @@ Rapid::Application.routes.draw do
   match "/entrar" => "sessions#new", :as => :login
   match "/salir" => "sessions#destroy", :as => :signout
   match "/enter/:id" => "sessions#enter", :as => :enter
+  match "/gogroup/:id" => "groups#enter", :as => :gogroup
 
   match "/blah" => "blah#about"
   match "/status" => "blah#status", :as => :status

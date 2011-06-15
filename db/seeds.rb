@@ -8,10 +8,21 @@ def create_user(group, name, email)
 end
 
 cyl = Group.create!(:name => 'Crestas y lechugas', :subdomain => 'cyl')
+blah = Group.create!(:name => 'Blah', :subdomain => 'blah')
 
 User.create!(:name => 'Anónimx', :email => 'anonimo@crestasylechugas.org', :password => 'none', :password_confirmation => 'none')
-create_user(cyl, 'Danigb', 'danigb@gmail.com')
+danigb = create_user(cyl, 'Danigb', 'danigb@gmail.com')
+blah.users << danigb
+blah.save
 
-[{:name=>"Vega", :email=>"vegalina@gmail.com"}, {:name=>"Rocío", :email=>"rocio.ballesta@gmail.com"}, {:name=>"Sonia", :email=>"sssonita@hotmail.com"}, {:name=>"Marianna", :email=>"marionn_nn@yahoo.es"}, {:name=>"Jaime", :email=>"fraguasjamon@yahoo.es"}, {:name=>"Jorge", :email=>"jorge_molero@yahoo.es"}, {:name=>"Bernardo", :email=>"arquibernardo@gmail.com"}, {:name=>"Juanillo", :email=>"juanitolock@yahoo.com.ar"}, {:name=>"Nat", :email=>"nataliaxii@yahoo.es"}, {:name=>"Lucía", :email=>"ldelmoral@gmail.com"}, {:name=>"Cristina", :email=>"cristina140475@yahoo.es"}, {:name=>"SuSan", :email=>"masukaro@hotmail.com"}, {:name=>"Chema", :email=>"chemahornero@yahoo.es"}, {:name=>"Luis", :email=>"luisnavarro06@gmail.com"}, {:name=>"Chío", :email=>"rocioiglesiasperez@yahoo.es"}, {:name=>"Sonia", :email=>"soniaretamero@yahoo.es"}, {:name=>"Danilanzacardos", :email=>"bilbocroquet@hotmail.com"}, {:name=>"Fernando", :email=>"fernigd@hotmail.com"}, {:name=>"Ana", :email=>"ecotono4@ecotonored.es"}, {:name=>"Alfonso", :email=>"alfonsopa55@gmail.com"}, {:name=>"Covi", :email=>"covicarral@gmail.com"}, {:name=>"Unai", :email=>"unai.panos@gmail.com"}, {:name=>"Antonio", :email=>"antoniolagunaaroca@gmail.com"}, {:name=>"Mónica", :email=>"monicatoledomartin@gmail.com"}, {:name=>"Marta", :email=>"msantofimia@hotmail.com"}, {:name=>"La Jose", :email=>"katal_cotx@yahoo.es"}, {:name=>"Pilar", :email=>"pilargalindo.barrera@gmail.com"}, {:name=>"Diana", :email=>"anadym@hotmail.com"}, {:name=>"Felipe", :email=>"gaditaman@gmail.com"}, {:name=>"Irene", :email=>"irene.martinez.ext@juntadeandalucia.es"}, {:name=>"Carli", :email=>"carlosmovie@hotmail.com"}, {:name=>"Montse", :email=>"meniz5@hotmail.com"}, {:name=>"Cristina", :email=>"crialbper@yahoo.es"}, {:name=>"Almu", :email=>"peca_tacirupeca@hotmail.com"}, {:name=>"Carmen", :email=>"laguerrera25@hotmail.com"}, {:name=>"Bego", :email=>"bgalgar@hotmail.com"}, {:name=>"Mavi", :email=>"mavipeich@yahoo.es"}, {:name=>"Salva", :email=>"salcut00@gmail.com"}, {:name=>"Rocío", :email=>"prol18@hotmail.com"}, {:name=>"Marga", :email=>"marga_zayda@hotmail.com"}, {:name=>"Cristina", :email=>"craceber@gmail.com"}, {:name=>"Joan", :email=>"joanvidto@hotmail.com"}, {:name=>"Anita", :email=>"sostenibilique@hotmail.com"}, {:name=>"María", :email=>"mariabeas@hotmail.com"}, {:name=>"Maria", :email=>"marinavarro82@hotmail.com"}, {:name=>"Iris", :email=>"irismu@hotmail.com"}, {:name=>"David", :email=>"dalowo@hotmail.com"}, {:name=>"Rebeca", :email=>"rebefor@yahoo.es"}, {:name=>"Manu", :email=>"manusantiago@gmail.com"}, {:name=>"Conchi", :email=>"conchiparada@hotmail.com"}, {:name=>"Meu", :email=>"meugenia76@gmail.com"}, {:name=>"Meu", :email=>"meugenia76@gmail.com"}, {:name=>"Carlos", :email=>"czurera@yahoo.es"}, {:name=>"elena", :email=>"moreyeta@gmail.com"}, {:name=>"carolina", :email=>"karolaola1@hotmail.com"}, {:name=>"Serena", :email=>"seremiau@gmail.com"}, {:name=>"Manuel", :email=>"boabdil@gmail.com"}, {:name=>"seba", :email=>"sebastienguery@hotmail.com"}, {:name=>"Miriam", :email=>"miriamislacristina@hotmail.com"}, {:name=>"Bárbara", :email=>"barbara@semasl.com"}, {:name=>"Eva", :email=>"evacorcoles@hotmail.com"}, {:name=>"Toñi", :email=>"anjatocampo@hotmail.com"}, {:name=>"Jaime", :email=>"jaimemorenogc@hotmail.com"}, {:name=>"Enrique", :email=>"empenper@gmail.com"}, {:name=>"Oscar", :email=>"morenuco1982@hotmail.com"}, {:name=>"Miguel", :email=>"titoporti@hotmail.com"}, {:name=>"Viola", :email=>"viola.bertoni@gmail.com"}].each do |info|
-  #create_user(cyl, :name => info[:name], :email => info[:email])
+[{:name=>"Vega", :email=>"vegalina@gmail.com"}, {:name=>"Manu", :email=>"manusantiago@gmail.com"},
+ {:name=>"Marianna", :email=>"marionn_nn@yahoo.es"}, {:name=>"Bernardo", :email=>"arquibernardo@gmail.com"},
+ {:name=>"Bárbara", :email=>"barbara@semasl.com"}, {:name=>"Joan", :email=>"joanvidto@hotmail.com"},
+ {:name=>"Serena", :email=>"seremiau@gmail.com"}, {:name=>"Salva", :email=>"salcut00@gmail.com"},
+ {:name=>"elena", :email=>"moreyeta@gmail.com"}, {:name=>"Luis", :email=>"luisnavarro06@gmail.com"},
+ {:name=>"Unai", :email=>"unai.panos@gmail.com"}, {:name=>"Fernando", :email=>"fernigd@hotmail.com"},
+ {:name=>"Viola", :email=>"viola.bertoni@gmail.com"}, {:name=>"Oscar", :email=>"morenuco1982@hotmail.com"},
+ {:name=>"Enrique", :email=>"empenper@gmail.com"}, {:name => 'Carmen', :email => 'carmen_escudero_gomez@hotmail.com'}
+].each do |info|
+  create_user(cyl, info[:name], info[:email])
 end

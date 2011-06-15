@@ -60,7 +60,7 @@ ActiveRecord::Schema.define(:version => 20110608124245) do
   create_table "notifications", :force => true do |t|
     t.integer  "user_id"
     t.integer  "message_id"
-    t.boolean  "mailed"
+    t.boolean  "mailed",     :default => false
     t.datetime "created_at"
     t.datetime "updated_at"
   end

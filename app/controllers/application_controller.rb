@@ -8,10 +8,6 @@ class ApplicationController < ActionController::Base
 
 
   expose(:current_group) do
-    if request.subdomain.present?
-      camp = Group.find_by_subdomain(request.subdomain)
-      session[:group_id] ||= camp.id if camp
-    end
     session[:group_id] ||= 1
     Group.find session[:group_id]
   end

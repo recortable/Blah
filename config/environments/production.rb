@@ -9,7 +9,7 @@ Rapid::Application.configure do
   config.action_controller.perform_caching = true
 
   # Disable Rails's static asset server (Apache or nginx will already do this)
-  config.serve_static_assets = true
+  config.serve_static_assets = false
 
   # Compress both stylesheets and JavaScripts
   config.assets.js_compressor = :uglifier
@@ -17,7 +17,7 @@ Rapid::Application.configure do
 
   # Specifies the header that your server uses for sending files
   # (comment out if your front-end server doesn't support this)
-  config.action_dispatch.x_sendfile_header = "X-Sendfile" # Use 'X-Accel-Redirect' for nginx
+  config.action_dispatch.x_sendfile_header = "X-Accel-Redirect" # Use 'X-Accel-Redirect' for nginx
 
   # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
   # config.force_ssl = true
@@ -44,25 +44,26 @@ Rapid::Application.configure do
   # config.threadsafe!
 
   # 1and1
-#  config.action_mailer.delivery_method = :smtp
-#  config.action_mailer.smtp_settings = {
-#      :address => "smtp.1and1.es",
-#      :port => 587,
-#      :domain => 'crestasylechugas.org',
-#      :user_name => 'cyl@mail.recortable.net',
-#      :password => 'autogestion',
-#      :authentication => 'plain'
-#  }
-
   config.action_mailer.delivery_method = :smtp
-  ActionMailer::Base.smtp_settings = {
-      :address => "smtp.sendgrid.net",
-      :port => "25",
-      :authentication => :plain,
-      :user_name => ENV['SENDGRID_USERNAME'],
-      :password => ENV['SENDGRID_PASSWORD'],
-      :domain => ENV['SENDGRID_DOMAIN']
+  config.action_mailer.smtp_settings = {
+      :address => "smtp.1and1.es",
+      :port => 587,
+      :domain => 'crestasylechugas.org',
+      :user_name => 'cyl@mail.recortable.net',
+      :password => 'autogestion',
+      :authentication => 'plain'
   }
+
+  #HEROKU
+#  config.action_mailer.delivery_method = :smtp
+#  ActionMailer::Base.smtp_settings = {
+#      :address => "smtp.sendgrid.net",
+#      :port => "25",
+#      :authentication => :plain,
+#      :user_name => ENV['SENDGRID_USERNAME'],
+#      :password => ENV['SENDGRID_PASSWORD'],
+#      :domain => ENV['SENDGRID_DOMAIN']
+#  }
 
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to

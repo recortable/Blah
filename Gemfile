@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rake', '0.9.2'
+#gem 'rake', '0.9.2'
 gem 'rails', '3.1.0.rc2'
 #gem 'rails', :git => 'git://github.com/rails/rails.git', :branch => '3-1-stable'
 #gem 'sprockets', :git => 'git://github.com/sstephenson/sprockets.git'
@@ -42,6 +42,7 @@ group :test, :development do
 end
 
 group :production do
-  gem 'therubyracer-heroku', '0.8.1.pre3'
-  gem 'pg'
+  #gem 'therubyracer-heroku', '0.8.1.pre3'
+  #gem 'pg'
+  gem 'mysql'
 end
