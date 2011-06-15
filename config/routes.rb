@@ -1,4 +1,4 @@
-Rapid::Application.routes.draw do
+Blah::Application.routes.draw do
   root :to => 'messages#index'
 
   resources :messages, :path => 'mensajes'
