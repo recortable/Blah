@@ -1,8 +1,9 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.1.0.rc4'
-#gem 'rails', :git => 'git://github.com/rails/rails.git', :branch => '3-1-stable'
-#gem 'sprockets', :git => 'git://github.com/sstephenson/sprockets.git'
+#gem 'multi_json', '1.0.3'
+#gem 'rails', '3.1.0.rc4'
+gem 'rails', :git => 'git://github.com/rails/rails.git', :branch => '3-1-stable'
+gem 'sprockets', :git => 'git://github.com/sstephenson/sprockets.git'
 gem 'sqlite3'
 gem 'mysql2'
 
