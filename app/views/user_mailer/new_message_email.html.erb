@@ -1,5 +1,6 @@
 <div style="width: 450px; margin: 20px auto; padding: 10px;background-color:#7DE663;">
   <h3 style="color:black"><%= @message.group.name %></h3>
+
   <div style="border:1px solid gray;padding:10px;margin:10px;background-color:#D8F8D1;">
     <h3><%= link_to message_title(@message), message_url(@message) %></h3>
     <h4><%= @user.name %> ha dicho:</h4>
@@ -10,9 +11,11 @@
   </div>
 
   <% if @message != @root %>
+      <h3 style="color:black;">La conversación entera es:</h3>
+
       <div style="border:1px solid gray;padding:10px;margin:10px;background-color:#D8F8D1;">
         <div style="margin-top:40px;">
-          <h4>La conversación entera es:</h4>
+
 
           <h3><%= @root.title %></h3>
           <h4>Hace <%= time_ago_in_words @root.created_at %>, <%= @root.user.name %> dijo:</h4>
@@ -33,6 +36,6 @@
       </div>
   <% end %>
   <p>Esto es un mensaje de <%= @message.group.name %>. Si lo recibes es porque estás apuntadx en su web.
-  Escribe a su administrador para darte de baja.</p>
+    Escribe a su administrador para darte de baja.</p>
 
 </div>
