@@ -1,7 +1,7 @@
 <div style="width: 450px; margin: 20px auto; padding: 10px;background-color:#7DE663;">
   <h3 style="color:black"><%= @message.group.name %></h3>
   <div style="border:1px solid gray;padding:10px;margin:10px;background-color:#D8F8D1;">
-    <h3><%= message_title @message %></h3>
+    <h3><%= link_to message_title(@message), message_url(@message) %></h3>
     <h4><%= @user.name %> ha dicho:</h4>
 
     <div style="color:black;">
