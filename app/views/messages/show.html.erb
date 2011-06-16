@@ -11,15 +11,17 @@
     <div class="responses">
       <% message.children.order('id ASC').each do |child| %>
           <div class="response">
-            <a name="m8" />
-            <%= div_for child do %>
-                <div class="authoring">
-                  <%= avatar_img child.user, 48 %>
-                  Respuesta de <%= link_to child.user.name, child.user %> hace <%= time_ago_in_words child.created_at %>
-                  <%= link_to 'Editar', edit_message_path(child) if can? :edit, child %>
-                </div>
-                <div class="body"><%= render_body child %></div>
-            <% end %>
+            <a name="m<%= child.id %>">
+              <%= div_for child do %>
+                  <div class="authoring">
+                    <%= avatar_img child.user, 48 %>
+                    Respuesta de <%= link_to child.user.name, child.user %>
+                    hace <%= time_ago_in_words child.created_at %>
+                    <%= link_to 'Editar', edit_message_path(child) if can? :edit, child %>
+                  </div>
+                  <div class="body"><%= render_body child %></div>
+              <% end %>
+            </a>
           </div>
       <% end %>
       <h3>Responder</h3>
