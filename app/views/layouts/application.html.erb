@@ -10,6 +10,7 @@
 
 <div id="page">
   <div id="session">
+    <%= link_to current_group.name, root_path %> &rArr;
     <% if current_user %>
         <%= link_to current_user.name, current_user %>
         <%= link_to 'Status', status_path if current_user.super? %>

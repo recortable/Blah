@@ -28,7 +28,7 @@
                 border-bottom: 1px solid $c-line;
                 padding-top: 5px;
                 .authoring {margin: 0;}
-                .body {margin:-3px 0 2px 0;}
+                .body {margin:-3px 0 2px 52px;}
             }
         }
 
@@ -76,8 +76,10 @@
 }
 
 
-.browser form.message {
+form.message {
     label {display: none;}
     textarea, input[type=text] {width: 98%;border: 1px solid $c-line; padding: 2px;}
-    textarea {height: 5em;}
+    textarea {height: 7em;}
 }
+
+.main form.message textarea {height: 20em;}

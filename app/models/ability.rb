@@ -8,5 +8,7 @@ class Ability
     can :read, Message
     can :create, Message
     can :update, User, :id => user.id
+    can :edit, Message, :user_id => user.id
+    can :update, Message, :user_id => user.id
   end
 end

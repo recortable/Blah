@@ -5,7 +5,7 @@ para correcciones leves. Si tienes que rectificar algo importante (como una hora
 responde a tu mensaje.</p>
 
 <%= simple_form_for message do |form| %>
-    <%= form.input :title %>
-    <%= form.input :body %>
+    <%= form.input :title, :label => false %>
+    <%= form.input :body, :label => false %>
     <%= form.submit 'Modificar' %>
 <% end %>

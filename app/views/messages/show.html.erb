@@ -4,16 +4,22 @@
     <%= avatar_img message.user, 48 %>
     <div class="authoring">
       <%= link_to message.user.name, message.user %> hace <%= time_ago_in_words message.created_at %>
+      <%= link_to 'Editar', edit_message_path(message) if can? :edit, message %>
     </div>
     <%= title message.title %>
     <div class="body"><%= render_body message %></div>
     <div class="responses">
       <% message.children.order('id ASC').each do |child| %>
           <div class="response">
-            <div class="authoring">
-              Respuesta de <%= link_to child.user.name, child.user %> hace <%= time_ago_in_words child.created_at %>
-            </div>
-            <div class="body"><%= render_body child %></div>
+            <a name="m8" />
+            <%= div_for child do %>
+                <div class="authoring">
+                  <%= avatar_img child.user, 48 %>
+                  Respuesta de <%= link_to child.user.name, child.user %> hace <%= time_ago_in_words child.created_at %>
+                  <%= link_to 'Editar', edit_message_path(child) if can? :edit, child %>
+                </div>
+                <div class="body"><%= render_body child %></div>
+            <% end %>
           </div>
       <% end %>
       <h3>Responder</h3>
