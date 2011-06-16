@@ -28,9 +28,10 @@ class BlahController < ApplicationController
 
   def perform_jobs
     Activity.create!(:description => "Work (#{notifications.count})")
-    notifications.each do |n|
-      UserMailer.new_message_email(n.user, n.message, n.message.root).deliver
+
+    while n = Notification.pending.first
       n.close
+      UserMailer.new_message_email(n.user, n.message, n.message.root).deliver
       Activity.create!(:description => 'Email sent', :resource => n)
     end
     redirect_to status_path

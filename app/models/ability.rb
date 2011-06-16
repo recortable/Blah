@@ -7,5 +7,6 @@ class Ability
     can :read, User
     can :read, Message
     can :create, Message
+    can :update, User, :id => user.id
   end
 end

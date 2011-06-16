@@ -1,7 +1,5 @@
 <div style="width: 450px; margin: 20px auto; padding: 10px;background-color:#7DE663;">
   <h3 style="color:black"><%= @message.group.name %></h3>
-  <p>Esto es un mensaje de <%= @message.group.name %>. Si lo recibes es porque estás apuntadx en su web.
-  Escribe a su administrador para darte de baja.</p>
   <div style="border:1px solid gray;padding:10px;margin:10px;background-color:#D8F8D1;">
     <h3><%= message_title @message %></h3>
     <h4><%= @user.name %> ha dicho:</h4>
@@ -34,4 +32,7 @@
         </div>
       </div>
   <% end %>
+  <p>Esto es un mensaje de <%= @message.group.name %>. Si lo recibes es porque estás apuntadx en su web.
+  Escribe a su administrador para darte de baja.</p>
+
 </div>

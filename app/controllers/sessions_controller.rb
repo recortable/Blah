@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
     if user.present?
       self.current_user = user
       user.update_attributes(:last_login_at => Time.now, :login_count => user.login_count + 1)
-      redirect_to stored_or(user_path(user)), :notice => "Bienvenidx a #{current_group.name}!"
+      redirect_to root_path, :notice => "Bienvenidx a #{current_group.name}!"
     else
       flash[:notice] = "La dirección o el correo está mal. Inténtalo de nuevo o contacta con el el administrador web."
       render :action => :new

@@ -5,12 +5,12 @@ class UserMailer < ActionMailer::Base
 
   helper :messages
 
-  def new_message_email(user, message, root)
-    @user = user
+  def new_message_email(recipient, message, root)
+    @user = message.user
     @root = root
     @message = message
     date = Time.now.strftime("%d/%m/%Y")
-    mail(:to => user.email, :subject => "[CyL #{date}] - #{root.title}")
+    mail(:to => recipient.email, :subject => "[CyL #{date}] - #{root.title}")
   end
 
 end
