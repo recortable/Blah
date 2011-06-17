@@ -24,7 +24,7 @@ class BlahController < ApplicationController
   end
 
   expose(:activity_size) { Activity.count }
-  expose(:activities) { Activity.order('id DESC').limit(30) }
+  expose(:activities) { Activity.order('id DESC').limit(50) }
 
   def perform_jobs
     Activity.create!(:description => "Work (#{notifications.count})")
@@ -34,6 +34,8 @@ class BlahController < ApplicationController
       UserMailer.new_message_email(n.user, n.message, n.message.root).deliver
       Activity.create!(:description => 'Email sent', :resource => n)
     end
+    Activity.delete_all ["created_at < ?", 1.days.ago]
+    Notification.notified.delete_all ["created_at < ?", 1.days.ago]
     redirect_to status_path
   end
 end

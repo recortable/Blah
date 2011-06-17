@@ -4,6 +4,8 @@
     <%= loop_button_link_to 'Lanzar trabajos', work_path %>
 <% end %>
 <h3>Notificaciones</h3>
+<p><label>Notificaciones pendientes:</label> <%= Notification.pending.count %></p>
+<p><label>Notificaciones:</label> <%= Notification.notified.count %></p>
 <ul>
   <% notifications.each do |n| %>
       <li><%= n.user.name %> - <%= message_title n.message %></li>

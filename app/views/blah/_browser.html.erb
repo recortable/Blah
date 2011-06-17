@@ -1,6 +1,6 @@
 <h2>Actividad reciente (<%= activities.size %> de <%= activity_size %>)</h2>
 <ul>
   <% activities.each do |activity| %>
-      <li>Hace <%= time_ago_in_words activity.created_at %> - <%= activity.description %></li>
+      <li><%= activity.created_at.strftime('%D %H:%M') %> - <%= activity.description %></li>
   <% end %>
 </ul>
