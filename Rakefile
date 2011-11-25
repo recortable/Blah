@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Rapid::Application.load_tasks
+Blah::Application.load_tasks
