@@ -36,6 +36,9 @@ gem 'rails_autolink'
 #gem 'exception_notification', :require => 'exception_notifier'
 #gem 'newrelic_rpm'
 
+gem 'unicorn'
+
+
 group :test, :development do
   # Pretty printed test output
   gem 'oink'
