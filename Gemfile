@@ -1,20 +1,16 @@
 source 'http://rubygems.org'
+gem 'rails', '3.1.2'
+group :assets do
+  gem 'sass-rails', '~> 3.1.5.rc.2'
+  gem 'coffee-rails', '~> 3.1.1'
+  gem 'uglifier', '>= 1.0.3'
+end
 
-#gem 'multi_json', '1.0.3'
-gem 'rails', '3.1.0.rc4'
-#gem 'rails', :git => 'git://github.com/rails/rails.git', :branch => '3-1-stable'
-#gem 'sprockets', :git => 'git://github.com/sstephenson/sprockets.git'
-gem 'sqlite3'
-gem 'mysql2'
-
-# Asset template engines
-gem 'sass-rails', "~> 3.1.0.rc"
-gem 'coffee-script'
-gem 'uglifier'
 gem 'jquery-rails'
 
 gem 'decent_exposure'
 gem 'simple_form'
+
 gem 'css3buttons'
 
 gem 'cancan'
