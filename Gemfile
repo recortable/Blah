@@ -33,7 +33,7 @@ gem 'rails_autolink'
 #gem 'newrelic_rpm'
 
 gem 'unicorn'
-
+gem 'mysql2'
 
 group :test, :development do
   # Pretty printed test output

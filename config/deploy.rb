@@ -1,9 +1,6 @@
 # SOURCES setup users: http://www.viget.com/extend/building-an-environment-from-scratch-with-capistrano-2/
 # setup deploy: http://www.capify.org/getting-started/from-the-beginning/
 
-# Precompile assets in local
-load 'deploy/assets'
-
 # default_run_options[:pty] = true
 set :application, "Blah"
 set :deploy_to, "/home/deploy/#{application}"
@@ -33,8 +30,11 @@ set :rvm_type, :user # Don't use system-wide RVM
 after "deploy", "deploy:cleanup"
 
 load 'config/deploy/symlink'
-#load 'conifg/deploy/passenger'
+# Precompile assets in local
+load 'deploy/assets'
+
 load 'config/deploy/mysql'
-load 'config/deploy/unicorn'
 load 'config/deploy/local_assets'
 
+load 'config/deploy/unicorn'
+#load 'conifg/deploy/passenger'
